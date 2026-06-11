@@ -18,5 +18,7 @@ Source: Human product direction, 2026-06-10.
 - The product discovers useful next learning targets.
 - The product adapts to the learner's interests and learning patterns over time.
 - The product turns large amounts of information into a coherent learning loop.
+- The product actively learns what the learner likes to learn.
+- The product learns how the learner learns.
 
-Source: Human product direction, 2026-06-10.
+Source: Human product direction, 2026-06-10 and 2026-06-11.
