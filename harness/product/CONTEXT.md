@@ -20,9 +20,3 @@ Source: Human product direction, 2026-06-10.
 - The product turns large amounts of information into a coherent learning loop.
 
 Source: Human product direction, 2026-06-10.
-
-## Notes
-
-Material product facts must come from human input, harness docs, or observed project evidence.
-
-Open questions have not been discussed or approved by a human.

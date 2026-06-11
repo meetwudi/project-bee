@@ -7,11 +7,3 @@ The product must help a learner maintain an adaptive loop across learning inputs
 ## Source
 
 Human product direction, 2026-06-10.
-
-## Acceptance Tests
-
-Unknown source gap: acceptance tests have not been discussed or approved by a human.
-
-## Notes
-
-Open questions have not been discussed or approved by a human.
