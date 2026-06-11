@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "source": {
+    "type": "git",
+    "url": "../meta-harness",
+    "ref": "3f5e18513628b188b58745af1c5ae6bda25c5881"
+  }
+}
