@@ -9,3 +9,9 @@ Use this checklist for changes under `harness/`.
 - Verify AI-proposed structure is clearly labeled as a non-committed proposal or was asked for before being added.
 - Verify AI-generated speculation has not been committed as product content or structure.
 - Verify reorganized, clarified, formatted, or deduplicated material preserves the meaning of the sourced material.
+- Verify Library definitions point to real places and declare a primitive kind.
+- Verify checked-in Library definitions are valid in `LIBRARIES.toml`.
+- Verify `harness/libraries/LIBRARIES.toml` lists shared repo-safe Libraries.
+- Verify local Library entries belong in ignored `harness/libraries/LIBRARIES.local.toml` and do not weaken checked-in governance.
+- Verify memory-capable Libraries are outside the repository unless a human explicitly asks otherwise.
+- Verify Library memory updates preserve source discipline and do not invent product content.
