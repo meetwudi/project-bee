@@ -1,0 +1,61 @@
+# Summarize today's Gmail into learning signal, collect feedback, and prepare safe noise-reduction actions.
+
+name = "daily-gmail-learning-digest"
+source_library = "library://project-harness"
+purpose = "Turn today's Gmail into a substantive learning brief, learn which sources and topics are not interesting, and prepare approved unsubscribe or filter actions that improve signal to noise."
+
+libraries = [
+  "library://meta-harness",
+  "library://project-harness",
+]
+
+per_execution_memory_library = "library://task-memory/daily-gmail-learning-digest/executions/"
+cross_execution_memory_library = "library://task-memory/daily-gmail-learning-digest/common/"
+
+procedure = [
+  "Read the applicable AGENTS.md discovery chain.",
+  "Read this TASK.toml.",
+  "Resolve and read the referenced Libraries.",
+  "Read prior cross-execution memory for learned interests, uninteresting topics, trusted sources, noisy senders, existing cleanup rules, and prior user decisions.",
+  "Search Gmail for messages from today in the user's local timezone, including inbox messages and learning-relevant messages outside the inbox when the user requests broader coverage.",
+  "Exclude SENT mail from the learning digest unless the user explicitly asks to include sent messages, outreach, drafts, or self-authored learning signals.",
+  "Compile a substantive learning brief from high-signal messages before cleanup triage. Include the key ideas, why they matter, concrete takeaways, and questions or next steps the user could act on.",
+  "Do not merely list sources, subject lines, sender categories, or cleanup metadata as the learning digest.",
+  "Extract compact gold points from sources when they contain reusable high-value ideas; if library://gold-points is registered, write those points there with provenance.",
+  "Summarize what the user can learn today, grouping by topic, sender, novelty, practical usefulness, and whether the item supports the existing learning loop.",
+  "Separate the digest into high-signal learning items, optional exploration items outside the user's usual zone, low-signal items, and obvious garbage candidates.",
+  "Ask the user for lightweight feedback on which items, topics, senders, or formats are not interesting, and record the stated feedback as execution memory.",
+  "Compare garbage candidates against prior memory and Gmail-visible evidence before proposing unsubscribe or filter actions.",
+  "Prefer reusing an existing relevant Gmail filter when one is visible or known from memory; otherwise propose a new filter only when the sender or pattern is clearly recurring and low signal.",
+  "For each proposed unsubscribe or filter action, show the exact sender, subject pattern or query, intended action, expected effect, and why it is safe.",
+  "Do not send unsubscribe requests, click unsubscribe links, create filters, modify filters, archive, trash, label, or otherwise change Gmail state until the user explicitly approves the exact action list.",
+  "If Gmail-native unsubscribe is unavailable and Chrome is needed for an unsubscribe page, use Chrome only after the user approves the specific unsubscribe candidate.",
+  "Apply only approved cleanup actions, then verify the result when the connector or browser exposes confirmation.",
+  "Write a reviewable per-execution memory file containing the compiled learning brief, search scope, signal/noise observations, cleanup proposals, user feedback, and action results.",
+  "Promote durable digest expectations, preferences, recurring noisy sources, approved filters, unsubscribe decisions, and gold-point expectations to cross-execution memory.",
+  "Record what was searched, summarized, learned from feedback, proposed, approved, applied, verified, and any blocker.",
+]
+
+outcomes = [
+  "The user receives a concise but substantive digest of what today's Gmail can teach them, with enough content to learn from without opening each source email.",
+  "Sent mail is excluded from the digest unless the user explicitly requests it.",
+  "Reusable high-value ideas are captured as gold points when a gold-points Library is available.",
+  "The digest distinguishes core learning signal, useful exploration, low-signal items, and garbage candidates.",
+  "User feedback about what is not interesting updates future task behavior.",
+  "Cleanup proposals are specific, reversible where possible, and grounded in observed Gmail evidence or prior memory.",
+  "No Gmail state changes or unsubscribe actions happen without explicit approval of the exact candidates.",
+  "Approved filter and unsubscribe actions reduce noise without hiding plausible future learning signal.",
+]
+
+completion_evidence = [
+  "Gmail search scope, date, timezone, query terms, and coverage limits.",
+  "Substantive digest delivered to the user.",
+  "Feedback captured from the user, or no-feedback statement.",
+  "Cleanup candidates proposed, including sender or query and intended action.",
+  "User approvals received, or no-approval statement.",
+  "Actions applied and verification result, or no-action statement.",
+  "Per-execution memory file written, or no-memory-file blocker.",
+  "Cross-execution memory updates made, or no-cross-execution-update statement.",
+  "Gold points written, or no-gold-points/no-gold-points-library statement.",
+  "Remaining blockers or no-blocker statement.",
+]
