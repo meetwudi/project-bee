@@ -21,6 +21,8 @@ harness/libraries/
 
 `AGENTS.md` explains Library discovery. `LIBRARIES.toml` is the checked-in index. `LIBRARIES.local.toml` is ignored and may add private or machine-local Libraries without weakening checked-in governance.
 
+Libraries must be indexed only in `LIBRARIES.toml` or `LIBRARIES.local.toml`, not in `AGENTS.md` or other docs.
+
 ## Index
 
 Each Library entry points to one place:
@@ -60,6 +62,19 @@ library://task-memory
 ```
 
 A Library reference selects a place to explore. The index does not enumerate that place's contents.
+
+## Use Protocol
+
+To use a Library:
+
+1. Read Library discovery instructions.
+2. Read the checked-in Library index.
+3. Read the local Library index when present.
+4. Resolve the `library://{library-name}` reference to its indexed place.
+5. Follow the selected place's own `AGENTS.md`, governance, and files.
+6. Read or update only the knowledge needed for the current work.
+
+If a Library reference includes a suffix after the Library name, first resolve the Library name, then interpret the suffix inside that Library's own place and rules.
 
 ## Primitive Kind
 
